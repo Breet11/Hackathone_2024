@@ -24,10 +24,6 @@ commands = {'/start': 'To start the bot', '/help': 'To check existing commands',
 @dp.message(Command("start"))
 async def command_start_handler(message: Message) -> None:
 
-    """
-    This handler receives messages with `/start` command
-    """
-
     await message.answer(f"Hello, {hbold(message.from_user.full_name)}!")
 
     command_info = "\n".join([f"{command}: {description}" for command, description in commands.items()])
