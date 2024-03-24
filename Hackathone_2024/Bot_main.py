@@ -15,9 +15,8 @@ from aiogram import F
 
 import request
 
-TOKEN = '7031013964:AAEGyUmbxX5A3mxY4FmWNfZn48EDbndkWPA' #https://t.me/Hackathone_2024_bot
+TOKEN = '' #Use your token. You can generate one at @BotFather
 
-# All handlers should be attached to the Router (or Dispatcher)
 dp = Dispatcher()
 
 commands = {'/start': 'To start the bot', '/help': 'To check existing commands', '/rate_news': ' To rate website. Write url of english news website'}
@@ -149,7 +148,6 @@ async def cmd_rate_news(message: Message, command: CommandObject):
 
     count = type_count.values()
     total_count = sum(count)
-    print(f"Total Count: {total_count}")
 
     if total_count >= 60:
         eval_entities = 1
