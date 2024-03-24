@@ -2,8 +2,6 @@
 import asyncio
 import logging
 import sys
-import re
-import datetime
 
 from aiogram import Bot, Dispatcher, Router, types
 from aiogram.enums import ParseMode
